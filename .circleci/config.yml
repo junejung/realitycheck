@@ -213,6 +213,8 @@ workflows:
           filters:
             branches:
               only: master
+            tags:
+              only: /^test-.*/
       - write_workspace
       - read_workspace:
           requires:
