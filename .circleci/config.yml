@@ -204,6 +204,9 @@ workflows:
       - machine_dlc
 
   feature_jobs:
+    triggers:
+      - schedule:
+          cron: "* * * * *"
     jobs:
       - save_and_restore_cache
       - contexts:
