@@ -211,8 +211,6 @@ workflows:
       - multi-contexts:
           context: individual-local
           filters:
-            branches:
-              only: master
             tags:
               only: /^test-.*/
       - write_workspace
