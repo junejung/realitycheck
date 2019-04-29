@@ -210,8 +210,9 @@ workflows:
           context: org-global
       - multi-contexts:
           context: individual-local
-          branches:
-            only: master
+          filters:
+            branches:
+              only: master
       - write_workspace
       - read_workspace:
           requires:
