@@ -207,6 +207,10 @@ workflows:
     triggers:
       - schedule:
           cron: "* * * * *"
+          filters:
+            branches:
+              only:
+                - master
     jobs:
       - save_and_restore_cache
       - contexts:
